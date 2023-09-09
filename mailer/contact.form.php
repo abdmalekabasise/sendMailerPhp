@@ -73,9 +73,11 @@ try {
     
     // Passing success message with "success" status
     echo json_encode(array('status' => 'success', 'message' => 'Email has been sent successfully!'));
+    header('Content-Type: application/json');
 } catch (Exception $e) {
     // Passing error message with "error" status
     echo json_encode(array('status' => 'error', 'message' => 'Email could not be sent. ' . $mail->ErrorInfo));
+    header('Content-Type: application/json');
 }
 
 ?>
