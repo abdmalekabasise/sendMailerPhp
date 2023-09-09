@@ -18,7 +18,7 @@
             $("#sendMessageButton div").removeClass("d-none");
 
             $.ajax({
-                url: "contact.form.php",
+                url: "mailer/contact.form.php",
                 type: "POST",
                 data: {
                     name: name,
