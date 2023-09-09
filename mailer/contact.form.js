@@ -45,7 +45,7 @@
                     }
                 },
                 error: function(xhr, textStatus, errorThrown) {
-                    console.log('error')
+                    console.log("xhr "+xhr,"textStatus "+ textStatus,"errorThrown "+  errorThrown)
                     $('#alertMessage').html("<div class='alert alert-danger alert-dismissible'>");
                     $('#alertMessage > .alert-danger').html("<button type='button' class='btn-close' data-bs-dismiss='alert' aria-hidden='true'>").append("</button>");
                     $('#alertMessage > .alert-danger').append("<strong>Ajax Error: " + errorThrown + "</strong>");
