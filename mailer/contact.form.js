@@ -30,6 +30,7 @@
                 dataType: "json",
                 
                 success: function (response) {
+                    console.log('ok')
                     if (response.status === 'success') {
                         $('#alertMessage').html("<div class='alert alert-success alert-dismissible'>");
                         $('#alertMessage > .alert-success').html("<button type='button' class='btn-close' data-bs-dismiss='alert' aria-hidden='true'>").append("</button>");
@@ -44,12 +45,14 @@
                     }
                 },
                 error: function(xhr, textStatus, errorThrown) {
+                    console.log('error')
                     $('#alertMessage').html("<div class='alert alert-danger alert-dismissible'>");
                     $('#alertMessage > .alert-danger').html("<button type='button' class='btn-close' data-bs-dismiss='alert' aria-hidden='true'>").append("</button>");
                     $('#alertMessage > .alert-danger').append("<strong>Ajax Error: " + errorThrown + "</strong>");
                     $('#alertMessage > .alert-danger').append('</div>');
                 },
                 complete: function () {
+                    console.log('complete')
                     $("#sendMessageButton").prop("disabled", false);
                     $("#sendMessageButton span").text("Send Message");
                     $("#sendMessageButton div").addClass("d-none");
